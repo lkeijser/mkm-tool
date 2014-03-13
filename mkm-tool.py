@@ -18,6 +18,7 @@ import cStringIO
 import operator
 import sys
 import urllib2
+import apicreds
 import xml.etree.ElementTree as ET
 from optparse import OptionParser
 
@@ -25,8 +26,8 @@ from optparse import OptionParser
 mkmtool_ver = '0.1-alpha'
 
 # configuration
-API_KEY = 'please-enter-your-api-key-here'
-MKM_USER = 'your-mkm-username'
+API_KEY = apicreds.API_KEY
+MKM_USER = apicreds.MKM_USER
 
 API_URL = 'https://www.mkmapi.eu/ws/{0}/{1}/'.format(MKM_USER, API_KEY)
 
@@ -195,4 +196,5 @@ class ParseMKM:
 # all systems GO!
 if __name__ == '__main__':
     main()
+
 
